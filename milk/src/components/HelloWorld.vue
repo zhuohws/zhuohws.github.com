@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>nice to meet you</h1>
+    <h1>what is your name</h1>
+    <h2>nice to meet you too</h2>
     <h2>nice to meet you too</h2>
   </div>
 </template>
