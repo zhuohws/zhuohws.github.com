@@ -1,0 +1,134 @@
+/* 去除默认样式 */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑';
+  color: #5a5a5a;
+}
+body{
+  max-width: 99999px;
+}
+/* 竖线 */
+.column-line{
+  height: 100%;
+  width: 1px;
+  background-color: #1f4e79;
+}
+/* 横线 */
+.row-line{
+  width: 100%;
+  height: 1px;
+  background-color: #1f4e79;
+}
+.main{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main .resume{
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  padding: 16px;
+  color: #263238;
+}
+.main .resume .basic{
+  height: 120px;
+}
+.name{
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #1f4e79;
+}
+.basic-info{
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: space-arround;
+}
+.info-case{
+  width: 40%;
+  text-align: left;
+}
+.info-case:nth-of-type(3){
+  width: 15%;
+}
+.experience,.projects,.skills,.evaluate{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.left-title{
+  width: 15%;
+  height: 100%;
+  font-size: 23px;
+  position: relative;
+  top: -10px;
+  color: #354f6c;
+}
+.left-title::after{
+  content: "";
+  position: absolute;
+  right: -10px;
+  border-radius: 3px;
+  top: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #173456;
+}
+.right-content{
+  flex: 1;
+  position: relative;
+  padding: 16px;
+}
+.right-content::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 0;
+  height: 1px;
+  background-color: #173456;
+}
+.right-content::after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  bottom: -19px;
+  width: 1px;
+  background-color: #173456;
+}
+.evaluate .right-content::after{
+  bottom: 16px;
+}
+.large-title{
+  font-size: 23px;
+  font-weight: 900;
+  padding: 8px 0;
+  color: #173456;
+  background-image: url(hhh.png);
+  background-repeat: no-repeat;
+  text-indent: 2em;
+}
+.ul-list{
+  padding-left: 16px;
+  line-height: 2;
+  font-size: 16px;
+  min-height: 30px;
+}
+ul{
+  height: 100%;
+}
+ol{
+  height: 100%;
+}
