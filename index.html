@@ -4,10 +4,16 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>卓卓卓胜辉</title>
-  <meta name="viewport" content="width=device-width, initial-scale=0.53, maximum-scale=1.0, user-scalable=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.53, maximum-scale=1.0, user-scalable=0">
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="shake.css">
+  <!-- To include only some csshake animations use this syntax -->
+  <!-- <link rel="stylesheet" type="text/css" href="csshake-slow.min.css"> -->
+  <!-- or from surge.sh -->
+  <!-- <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="/main.css"/> -->
+  <!-- <script src="main.js"></script> -->
 </head>
 <body>
   <div class="main">
@@ -18,7 +24,7 @@
           <div class="info-case">求职意向：WEB 前端工程师 </div>
           <div class="info-case">电 话 : 155-5817-5716 </div>
           <div class="info-case">年 龄 ：23</div>
-          <div class="info-case">在线简历：<a href="https://zhuohws.github.io">https://zhuohws.github.io</a></div>
+          <div class="info-case">个人主页：<a href="https://zhuohws.github.io">https://zhuohws.github.io</a></div>
           <div class="info-case">邮 箱：yueshengzhuo@foxmail.com</div>
         </div>
         <div class="row-line"></div>
@@ -33,8 +39,8 @@
               <li>工作单位：杭州米天基因科技有限公司</li>
             </ul>
             <p>工作时间：2017/12/1 ~ 2018/12/7</p>
-            <p>工作内容：前端开发及后期升级维护</p>
-            <p>开发项目：dogma(恶性肿瘤防控调查数据管理系统)、ercp 信息录入管理系统</p>
+            <p>工作岗位：前端内容的开发和优化及维护</p>
+            <p>开发项目：DOGMA恶性肿瘤防控调查数据管理系统、ERCP手术信息录入管理系统</p>
           </div>
         </div>
       </div>
@@ -48,16 +54,17 @@
           </div>
           <div class="ul-list">
             <ol>
-              <li>所用技术 : Vue.js框架 、Element-ui桌面组件库、Echarts可视化图表工具</li>
-              <li>项目描述 : 多机构参与、分项目阶段的数据录入管理系统</li>
+              <li>所用技术 : Vue.js+ Element+ Echarts</li>
+              <li>项目描述 : 多机构参与的数据录入管理系统</li>
               <li>主要功能实现：</li>
             </ol>
             <div class="ul-list">
               <ul>
-                <li>用户管理：各机构管理员可以创建以及冻结、重置机构成员，设置本机构参与项目的各表单的录入、审核角色以及角色权限。</li>
-                <li>表单录入及审核：每个表单由多个模块组成，根据表单的模板id，获取模块列表，将各个静态模块组件拼接成完整的表单。使用element-ui的表单组件，进行数据的收集和校验。</li>
-                <li>数据导出：根据设置的筛选条件，获取符合条件的数据，生成文件后，保存在后台，管理员可以导出excel文件作为研究数据。</li>
-                <li>数据导入：后台系统将生成不同表单的excel模板，用户将数据按照格式填入excel中，上传并经系统识别无误后，同手工录入的表单一样，经审核即可转为数据存入数据库。</li>
+                <li>使用vuex+storage+mixin管理用户信息，使用vue-router设置不同用户的访问路径及权限，将路由与组件映射，实现页面的跳转与切换。</li>
+                <li>根据产品功能需求，划分了患者中心、项目管理、表单中心、数据统计等多个页面；根据UI设计图，设计了多个公共CSS样式表，以及通过修改Element的样式变量自定义全局的主题颜色，确保了整体的样式一致性。</li>
+                <li>使用Vue动态组件渲染由多个模块组成的表单模板，使用Element的表单组件实现表单的内在关联设计、数据校验和收集。</li>
+                <li>使用vue-axios进行前后端的数据交互，使用Element的table以及tree等组件展示和收集基本数据，按需引用Echarts的部分组件，完成了统计数据的个性化展示。</li>
+                <li>引用js-file-download插件以及element的upload组件，实现了录入数据的筛选以及表格数据的导入及导出功能。</li>
               </ul>
             </div>
           </div>
@@ -66,17 +73,17 @@
           </div>
           <div class="ul-list">
             <ol>
-              <li>所用技术：Vue.js框架 、Element-ui桌面组件库、Echarts可视化图表工具、electron</li>
+              <li>所用技术：Vue.js+ Element+ Echarts +Electron</li>
               <li>项目描述：用于录入并管理ERCP手术相关数据及随访调查的电子系统</li>
-              <li class="link-image">项目预览：<a href="https://shimo.im/docs/s6QJwdeQ76wWOh34/">https://shimo.im/docs/s6QJwdeQ76wWOh34/</a></li>
+              <li>项目预览：https://shimo.im/docs/s6QJwdeQ76wWOh34/</li>
               <li>主要功能实现：</li>
             </ol>
             <div class="ul-list">
               <ul>
-                <li>页面导航与权限：不同用户设置相应的页面访问权限：用户信息使用vuex进行管理，方便修改以及读取；在主页面，根据用户类型，生成相应的导航列表；在路由设置中，页面跳转前，判断该用户类型的进入权限；同时，在前后端交互时，也会根据token参数，判断用户是否有访问接口的权限。</li>
-                <li>自定义字段：定义不同的表单项（单选、多选、文本输入框、级联等），字段绑定了基本类型、字段id、文本标题、选项列表、是否必填等信息。所组成的字段库列表存储在数据库。</li>
-                <li>自定义表单：每一个表单模板，绑定了名称、表单id等基本信息，在字段库内内挑选字段，排序以及设置字段间的关联关系添加至表单，将模板存入数据库，方便各页面调用。</li>
-                <li>多样化数据统计：引用Echarts可视化图表工具，创建了二维柱状图、饼图、三维柱状图、区域缩放三维柱状图、进度统计圆环图等多样化的图表模板，可以在各个页面引用，将获取的后台统计数据，转化成直观的统计图表。</li>
+                <li>根据项目需求以及UI设计，完成了页面的整体布局以及访问权限设置等基本功能。</li>
+                <li>自由表单：表单和字段都可以自由创建和修改。每个表单包含了多个字段及其之间的关联关系等组成，每个字段又绑定了基本类型、唯一id、选项、是否必填等信息。在表单的录入审核等页面，根据表单id即可获取表单模板信息</li>
+                <li>多样化数据统计：引用Echarts可视化图表工具，创建了二维柱状图、饼图、三维柱状图、区域缩放三维柱状图、进度统计圆环图等多样化的图表模板，可在各个页面引用，将获取的后台统计数据，转化成直观的统计图表。</li>
+                <li>使用Electron+grunt将项目打包成不同版本的exe文件以及不同版本的安装包。</li>
               </ul>
             </div>
           </div>
@@ -89,20 +96,33 @@
         <div class="right-content">
           <div class="ul-list">
             <ul>
-              <li> 熟悉Vue.js框架，熟悉vue-router、axios、vuex以及element-ui、muse-ui等组件库，能够编写可复用的组件即插即用。</li>
-              <li>熟悉echarts图表可视化工具，可以根据需求定制可复用的统计图表。</li>
-              <li>了解Electron这一构建跨平台应用程序的开源库，可以在vue的基础上构建出具有相应功能的桌面应用。</li>
-              <li>熟悉原生JavaScript，熟悉面向对象编程原理和闭包函数 。了解ES6标准，可以使用新语法进行代码的编写。</li>
-              <li>熟悉 JavaScript 的 DOM 操作，能使用原生 Js 实现各种网页效果，例如轮播图、导航内容同步滚动栏、导航切换等 。</li>
-              <li>熟悉 AJAX 技术，了解 XML、JSON 数据通信，能使用原生AJAX实现异步传输，通过 JSONP 实现跨域请求，与后台交换数据并更新部分网页内容 。</li>
-              <li>了解 AngularJS 框架，例如其中的MVC设计模式 、数据双向绑定原理 、路由和依赖注入的原理 。</li>
-              <li>了解 Photoshop、AI等软件，能根据UI的设计原图制作相关图片素材 。</li>
-              <li>熟悉 JQuery 库、JQuery 插件，可以熟练使用 JQuery 制作动画效果。</li>
-              <li>熟悉 HTML+CSS网页架构和布局，能熟练完成各种静态页面的布局和样式编写。</li>
-              <li>熟悉ML5 新特性，例如语义化标签、 canvas、audio、SVG 和本地存储等。</li> 
-              <li>熟悉 CSS3.0 新特性，例如flex布局、文本阴影、2D/3D转换、渐变背景色、过渡属性和渐变动画等 。</li>
-              <li>了解建站的基本流程，对域名及服务器的配置有一定的了解。</li>
+             	<li>熟悉Vue.js框架，熟悉vue-router、vue-axios、vuex；使用过Element-ui、muse-ui等组件库，也能够编写可复用的组件即插即用</li>
+             	<li>熟悉Echarts图表可视化工具，可以根据需求定制个性化的统计图表。</li>
+             	<li>了解 Electron这一构建跨平台应用程序的开源库，可以在vue的基础上构建出具有相应功能的桌面应用。</li>
+             	<li>	熟悉原生JavaScript，了解面向对象编程原理和闭包函数 ；了解ES6标准，可以使用新语法进行代码的编写。</li>
+             	<li>熟悉 JavaScript 的 DOM 操作，可以实现各种网页效果，例如轮播图、导航内容同步滚动栏、导航切换等 。</li>
+             	<li>了解ES6标准，可以使用新语法进行编码。</li>
+             	<li>熟悉 AJAX 技术，解 XML、JSON 数据通信，能使用原生AJAX实现异步传输，通过 JSONP 实现跨域请求，与后台交换数据并更新部分网页内容 。</li>
+             	<li>了解 AngularJS 框架，例如其中的MVC设计模式 、数据双向绑定原理 、路由和依赖注入的原理 。</li>
+             	<li>了解 Photoshop、AI等软件，能根据UI的设计原图制作相关图片素材 。</li>
+             	<li>熟悉 JQuery 库、JQuery 插件，可以熟练使用 JQuery 制作动画效果。</li>
+             	<li>熟悉 HTML+CSS网页架构和布局，能熟练完成各种静态页面的布局和样式编写。</li>
+             	<li>熟悉 HTML5 新特性，例如语义化标签、 canvas、audio、SVG 和本地存储等。</li> 
+             	<li>熟悉 CSS3.0 新特性，例如flex布局、文本阴影、2D/3D转换、渐变背景色、过渡属性和渐变动画等 。</li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="left-title shake-little">
+          教育背景
+        </div>
+        <div class="right-content">
+          <div class="ul-list">
+            <ul>
+              <li>学历：宜春学院（二本统招，18届毕业生）</li>
+            </ul>
+            <p>专业：计算机科学与技术</p>
           </div>
         </div>
       </div>
@@ -114,8 +134,8 @@
           <div class="ul-list">
             <ul>
               <li>有良好的抗压能力和团队合作精神，对技术有强烈的进取心。</li>
-              <li>有较强的代码编写能力、良好的职业素养、良好的编码习惯、和严谨的代码风格。</li>
-              <li>有较强的自我管理能力、积极的学习心态，善于总结和吸取经验。</li>
+              <li>有良好的网页开发能力、良好的职业素养，严谨的代码风格和良好的编码习惯。</li>
+              <li>对于web前端方面的前沿和动向有一定的了解，善于总结和吸取经验。</li>
               <li>个性开朗，积极乐观，容易相处，责任心强。</li>
             </ul>
           </div>
@@ -126,5 +146,36 @@
   </div>
   <canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
   <script src="cancas.js"></script>
+<!--   <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+  <script type="text/javascript">
+    /* 鼠标特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("❤富强❤","❤民主❤","❤文明❤","❤和谐❤","❤自由❤","❤平等❤","❤公正❤","❤法治❤","❤爱国❤","❤敬业❤","❤诚信❤","❤友善❤");
+            var $i = $("<span></span>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    });
+  </script> -->
 </body>
 </html>
