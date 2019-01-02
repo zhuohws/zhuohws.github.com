@@ -61,7 +61,6 @@ body{
 }
 .info-case:nth-of-type(3){
   width: 12%;
-  text-decoration:none;
 }
 .experience,.projects,.skills,.evaluate{
   display: flex;
