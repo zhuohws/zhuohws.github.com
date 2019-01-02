@@ -56,11 +56,12 @@ body{
   align-items: space-arround;
 }
 .info-case{
-  width: 40%;
+  width: 43%;
   text-align: left;
 }
 .info-case:nth-of-type(3){
-  width: 15%;
+  width: 12%;
+  text-decoration:none;
 }
 .experience,.projects,.skills,.evaluate{
   display: flex;
